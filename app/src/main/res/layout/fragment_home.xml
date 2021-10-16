@@ -21,9 +21,9 @@
             android:minHeight="42dp"
             android:padding="8dp"
             android:src="@drawable/ic_add_18"
-            app:layout_constraintBottom_toBottomOf="@+id/shapeableImageView"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImageFrame"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+            app:layout_constraintTop_toTopOf="@+id/profileImageFrame" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView3"
@@ -37,17 +37,25 @@
             app:layout_constraintTop_toTopOf="@+id/imageButton"
             tools:text="@string/amount_placeholder" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/shapeableImageView"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+        <FrameLayout
+            android:id="@+id/profileImageFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/profile_picture_img"
+            android:background="@drawable/circular_background"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.ShapeableImageView" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_picture_img"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.ShapeableImageView" />
+        </FrameLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -60,7 +68,7 @@
             app:cardCornerRadius="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shapeableImageView">
+            app:layout_constraintTop_toBottomOf="@+id/profileImageFrame">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -185,6 +193,7 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:fontFamily="@font/ubuntu_bold"
                 android:text="@string/top_deals"
@@ -193,11 +202,16 @@
                 tools:text="@string/top_deals" />
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textMore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:clickable="true"
                 android:drawablePadding="4dp"
+                android:focusable="true"
                 android:gravity="center_vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:text="@string/more"
                 android:textAppearance="?attr/textAppearanceCaption"
                 android:textColor="?attr/colorPrimary"
