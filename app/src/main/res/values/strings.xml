@@ -5,4 +5,13 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="hint_password">Password</string>
     <string name="hint_username">Username</string>
+    <string name="content_desc_add_cash">Add cash</string>
+    <string name="amount_placeholder">KES 2,450</string>
+    <string name="car_model_placeholder">Civic Type R 2019</string>
+    <string name="car_name_placeholder">Honda</string>
+    <string name="my_garage">My Garage</string>
+    <string name="available_cars">Available Cars</string>
+    <string name="durations">Long term, Short term</string>
+    <string name="top_deals">Top Deals</string>
+    <string name="more">More</string>
 </resources>

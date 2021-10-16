@@ -10,4 +10,10 @@
         android:name="com.android.driveit_xml.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.android.driveit_xml.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
 </navigation>
