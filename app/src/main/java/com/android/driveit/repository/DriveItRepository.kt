@@ -9,5 +9,7 @@ class DriveItRepository {
     suspend fun loginUser(email: String, password: String) =
         reqresService.loginUser(email, password)
 
+    suspend fun getUserInfo() = reqresService.getUserInfo()
+
     suspend fun getCarImages() = reqresService.getCarImages()
 }

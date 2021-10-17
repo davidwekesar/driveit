@@ -31,6 +31,12 @@ class HomeFragment : Fragment() {
 
         setupOnClickListeners()
 
+        viewModel.userInfo.observe(viewLifecycleOwner, { userInfo ->
+            userInfo?.let {
+                setProfileImage(it.data.avatar)
+            }
+        })
+
         viewModel.photoResult.observe(viewLifecycleOwner, { photoResult ->
             photoResult?.let {
                 val mainCarImageView: ImageView = binding.mainCarImageView
@@ -59,6 +65,11 @@ class HomeFragment : Fragment() {
         textMore.setOnClickListener {
             navigateToCarListFragment()
         }
+    }
+
+    private fun setProfileImage(url: String) {
+        val profileImage: ImageView = binding.profileImage
+        Picasso.get().load(url).into(profileImage)
     }
 
     private fun navigateToCarListFragment() {

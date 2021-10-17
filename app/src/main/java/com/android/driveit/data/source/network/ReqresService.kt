@@ -27,6 +27,9 @@ interface ReqresService {
         @Field("password") password: String
     ): LoginResponse
 
+    @GET("api/users/2")
+    suspend fun getUserInfo(): UserInfo
+
     @Headers("Authorization: Client-ID ${BuildConfig.accessKey}")
     @GET("https://api.unsplash.com/search/photos?page=1&query=car")
     suspend fun getCarImages(): PhotoResult
