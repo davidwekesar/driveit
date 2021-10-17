@@ -19,4 +19,6 @@
     <string name="settings">Settings</string>
     <string name="search">Search</string>
     <string name="account">Account</string>
+    <string name="monthly">monthly</string>
+    <string name="per_week">Per week</string>
 </resources>

@@ -5,13 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.android.driveit_xml.data.source.network.LoginResponse
-import com.android.driveit_xml.repository.Repository
+import com.android.driveit_xml.repository.DriveItRepository
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
 class LoginViewModel : ViewModel() {
 
-    private val repository = Repository()
+    private val repository = DriveItRepository()
 
     private val _loginResponse = MutableLiveData<LoginResponse>()
     val loginResponse: LiveData<LoginResponse> get() = _loginResponse

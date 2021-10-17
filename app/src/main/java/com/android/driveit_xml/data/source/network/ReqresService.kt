@@ -1,12 +1,11 @@
 package com.android.driveit_xml.data.source.network
 
+import com.android.driveit_xml.BuildConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 private const val BASE_URL = "https://reqres.in/"
 
@@ -27,6 +26,10 @@ interface ReqresService {
         @Field("email") email: String,
         @Field("password") password: String
     ): LoginResponse
+
+    @Headers("Authorization: Client-ID ${BuildConfig.accessKey}")
+    @GET("https://api.unsplash.com/search/photos?page=1&query=car")
+    suspend fun getCarImages(): PhotoResult
 }
 
 object Reqres {
