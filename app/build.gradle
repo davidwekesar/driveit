@@ -3,13 +3,14 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.android.driveit_xml"
+        applicationId "com.android.driveit"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -65,4 +66,8 @@ dependencies {
 
     // Picasso
     implementation "com.squareup.picasso:picasso:$picasso_version"
+
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.4.2')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }

@@ -1,4 +1,4 @@
-package com.android.driveit_xml.ui
+package com.android.driveit.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,10 +8,10 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.android.driveit_xml.data.source.network.PhotoResult
-import com.android.driveit_xml.databinding.FragmentCarListBinding
-import com.android.driveit_xml.ui.adapters.CarListAdapter
-import com.android.driveit_xml.viewmodels.CarListViewModel
+import com.android.driveit.data.source.network.PhotoResult
+import com.android.driveit.databinding.FragmentCarListBinding
+import com.android.driveit.ui.adapters.CarListAdapter
+import com.android.driveit.viewmodels.CarListViewModel
 
 class CarListFragment : Fragment() {
 

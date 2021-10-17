@@ -1,6 +1,6 @@
-package com.android.driveit_xml.repository
+package com.android.driveit.repository
 
-import com.android.driveit_xml.data.source.network.Reqres
+import com.android.driveit.data.source.network.Reqres
 
 class DriveItRepository {
 

@@ -1,11 +1,11 @@
-package com.android.driveit_xml.viewmodels
+package com.android.driveit.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.android.driveit_xml.data.source.network.LoginResponse
-import com.android.driveit_xml.repository.DriveItRepository
+import com.android.driveit.data.source.network.LoginResponse
+import com.android.driveit.repository.DriveItRepository
 import kotlinx.coroutines.launch
 import timber.log.Timber
 

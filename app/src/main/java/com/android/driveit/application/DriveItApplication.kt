@@ -1,7 +1,7 @@
-package com.android.driveit_xml.application
+package com.android.driveit.application
 
 import android.app.Application
-import com.android.driveit_xml.BuildConfig
+import com.android.driveit.BuildConfig
 import timber.log.Timber
 
 class DriveItApplication : Application() {

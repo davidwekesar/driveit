@@ -1,16 +1,13 @@
-package com.android.driveit_xml.ui
+package com.android.driveit.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
-import com.android.driveit_xml.R
-import com.android.driveit_xml.databinding.ActivityMainBinding
+import com.android.driveit.R
+import com.android.driveit.databinding.ActivityMainBinding
 import com.google.android.material.badge.BadgeDrawable
-import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable

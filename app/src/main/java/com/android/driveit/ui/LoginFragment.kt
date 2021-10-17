@@ -1,4 +1,4 @@
-package com.android.driveit_xml.ui
+package com.android.driveit.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.android.driveit_xml.R
-import com.android.driveit_xml.databinding.FragmentLoginBinding
-import com.android.driveit_xml.viewmodels.LoginViewModel
+import com.android.driveit.R
+import com.android.driveit.databinding.FragmentLoginBinding
+import com.android.driveit.viewmodels.LoginViewModel
 import com.google.android.material.button.MaterialButton
 
 class LoginFragment : Fragment() {

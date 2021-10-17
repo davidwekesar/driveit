@@ -1,4 +1,4 @@
-package com.android.driveit_xml
+package com.android.driveit
 
 import org.junit.Test
 

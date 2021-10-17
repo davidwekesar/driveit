@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.android.driveit_xml.ui.LoginFragment"
+        android:name="com.android.driveit.ui.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login" />
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.android.driveit_xml.ui.HomeFragment"
+        android:name="com.android.driveit.ui.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/carListFragment"
-        android:name="com.android.driveit_xml.ui.CarListFragment"
+        android:name="com.android.driveit.ui.CarListFragment"
         android:label="CarListFragment"
         tools:layout="@layout/fragment_car_list" />
 </navigation>

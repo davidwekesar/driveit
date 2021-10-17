@@ -1,6 +1,6 @@
-package com.android.driveit_xml.data.source.network
+package com.android.driveit.data.source.network
 
-import com.android.driveit_xml.BuildConfig
+import com.android.driveit.BuildConfig
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

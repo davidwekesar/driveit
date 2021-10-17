@@ -1,11 +1,11 @@
-package com.android.driveit_xml.ui.adapters
+package com.android.driveit.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.android.driveit_xml.data.source.network.Photo
-import com.android.driveit_xml.databinding.ListItemCarBinding
+import com.android.driveit.data.source.network.Photo
+import com.android.driveit.databinding.ListItemCarBinding
 import com.squareup.picasso.Picasso
 
 class CarListAdapter(private val photos: List<Photo>) : RecyclerView.Adapter<CarViewHolder>() {

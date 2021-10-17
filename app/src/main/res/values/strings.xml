@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">driveit - xml</string>
-    <string name="driveit">driveit</string>
+    <string name="app_name">driveit</string>
     <string name="log_in">Log In</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="hint_password">Password</string>

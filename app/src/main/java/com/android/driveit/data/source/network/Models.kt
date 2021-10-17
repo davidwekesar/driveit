@@ -1,4 +1,4 @@
-package com.android.driveit_xml.data.source.network
+package com.android.driveit.data.source.network
 
 data class LoginResponse(val token: String)
 

@@ -1,4 +1,4 @@
-package com.android.driveit_xml.ui
+package com.android.driveit.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,10 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.android.driveit_xml.R
-import com.android.driveit_xml.databinding.FragmentHomeBinding
-import com.android.driveit_xml.ui.adapters.CarListAdapter
-import com.android.driveit_xml.viewmodels.HomeViewModel
+import com.android.driveit.R
+import com.android.driveit.databinding.FragmentHomeBinding
+import com.android.driveit.ui.adapters.CarListAdapter
+import com.android.driveit.viewmodels.HomeViewModel
 import com.squareup.picasso.Picasso
 
 class HomeFragment : Fragment() {
