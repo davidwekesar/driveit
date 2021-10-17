@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.android.driveit_xml.data.source.network.LoginResponse
 import com.android.driveit_xml.repository.Repository
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 class LoginViewModel : ViewModel() {
 
@@ -20,7 +21,7 @@ class LoginViewModel : ViewModel() {
             try {
                 _loginResponse.value = repository.loginUser(email, password)
             } catch (e: Exception) {
-                
+                Timber.e("Error logging in user: ${e.message}")
             }
         }
     }
