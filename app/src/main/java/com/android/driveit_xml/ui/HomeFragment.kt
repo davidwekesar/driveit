@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -28,10 +29,7 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        val textMore: TextView = binding.textMore
-        textMore.setOnClickListener {
-            findNavController().navigate(R.id.carListFragment)
-        }
+        setupOnClickListeners()
 
         viewModel.photoResult.observe(viewLifecycleOwner, { photoResult ->
             photoResult?.let {
@@ -44,6 +42,27 @@ class HomeFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    private fun setupOnClickListeners() {
+        val textMyGarage: TextView = binding.textMyGarage
+        textMyGarage.setOnClickListener {
+            navigateToCarListFragment()
+        }
+
+        val btnAvailableCars: ImageButton = binding.btnAvailableCars
+        btnAvailableCars.setOnClickListener {
+            navigateToCarListFragment()
+        }
+
+        val textMore: TextView = binding.textMore
+        textMore.setOnClickListener {
+            navigateToCarListFragment()
+        }
+    }
+
+    private fun navigateToCarListFragment() {
+        findNavController().navigate(R.id.carListFragment)
     }
 
     override fun onDestroyView() {
