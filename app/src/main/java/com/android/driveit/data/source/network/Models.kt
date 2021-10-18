@@ -24,3 +24,5 @@ data class UserData(
 
     val avatar: String
 )
+
+data class Car(val name: String, val price: Int, val url: String, val duration: String)

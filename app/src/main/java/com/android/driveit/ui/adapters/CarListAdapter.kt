@@ -1,14 +1,23 @@
 package com.android.driveit.ui.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.android.driveit.data.source.network.Photo
+import com.android.driveit.R
+import com.android.driveit.data.source.network.Car
 import com.android.driveit.databinding.ListItemCarBinding
+import com.android.driveit.utils.mapRateToDuration
 import com.squareup.picasso.Picasso
+import java.text.NumberFormat
+import java.util.*
 
-class CarListAdapter(private val photos: List<Photo>) : RecyclerView.Adapter<CarViewHolder>() {
+class CarListAdapter(
+    private val cars: List<Car>,
+    private val context: Context
+) : RecyclerView.Adapter<CarViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -17,19 +26,29 @@ class CarListAdapter(private val photos: List<Photo>) : RecyclerView.Adapter<Car
     }
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
-        holder.bind(photos[position])
+        holder.bind(cars[position], context)
     }
 
-    override fun getItemCount(): Int = photos.size
+    override fun getItemCount(): Int = cars.size
 }
 
 class CarViewHolder(binding: ListItemCarBinding) : RecyclerView.ViewHolder(binding.root) {
 
     private val carImageView: ImageView = binding.carImageView
+    private val textCarName: TextView = binding.textCarName
+    private val textCarPrice: TextView = binding.textCarPrice
+    private val textDuration: TextView = binding.textDuration
+    private val textRate: TextView = binding.textRate
 
-    fun bind(photo: Photo) {
+    fun bind(car: Car, context: Context) {
         Picasso.get()
-            .load(photo.urls.small)
+            .load(car.url)
             .into(carImageView)
+
+        textCarName.text = car.name
+        val price = NumberFormat.getNumberInstance(Locale.getDefault()).format(car.price)
+        textCarPrice.text = String.format(context.getString(R.string.currency), price)
+        textDuration.text = car.duration
+        textRate.text = mapRateToDuration(car.duration)
     }
 }

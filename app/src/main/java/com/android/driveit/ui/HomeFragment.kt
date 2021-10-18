@@ -38,11 +38,11 @@ class HomeFragment : Fragment() {
             }
         })
 
-        viewModel.photoResult.observe(viewLifecycleOwner, { photoResult ->
-            photoResult?.let {
+        viewModel.carList.observe(viewLifecycleOwner, { carList ->
+            carList?.let {
                 val mainCarImageView: ImageView = binding.mainCarImageView
-                Picasso.get().load(it.results[0].urls.small).into(mainCarImageView)
-                val carListAdapter = CarListAdapter(it.results)
+                Picasso.get().load(carList[0].url).into(mainCarImageView)
+                val carListAdapter = CarListAdapter(carList, requireContext())
                 val recyclerView = binding.horizontalCarList
                 recyclerView.adapter = carListAdapter
             }

@@ -4,16 +4,19 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.android.driveit.data.source.network.Car
 import com.android.driveit.data.source.network.PhotoResult
 import com.android.driveit.repository.DriveItRepository
+import com.android.driveit.utils.getListOfCars
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
 class CarListViewModel: ViewModel() {
 
     private val repository: DriveItRepository = DriveItRepository()
-    private val _photoResult = MutableLiveData<PhotoResult>()
-    val photoResult: LiveData<PhotoResult> get() = _photoResult
+
+    private val _carList = MutableLiveData<List<Car>>()
+    val carList: LiveData<List<Car>> get() = _carList
 
     init {
         getCarImages()
@@ -22,7 +25,8 @@ class CarListViewModel: ViewModel() {
     private fun getCarImages() {
         viewModelScope.launch {
             try {
-                _photoResult.value = repository.getCarImages()
+                val photos = repository.getCarImages().results
+                _carList.value = getListOfCars(photos)
             } catch (e: Exception) {
                 Timber.e("Error getting images: ${e.message}")
             }

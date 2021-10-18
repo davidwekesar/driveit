@@ -25,6 +25,6 @@
     <string name="highest_price">Highest Price</string>
     <string name="lowest_price">Lowest Price</string>
     <string name="num_amount">2,450</string>
-    <string name="currency">KES</string>
+    <string name="currency">KES %1$s</string>
     <string name="hello_john">Hello, John</string>
 </resources>

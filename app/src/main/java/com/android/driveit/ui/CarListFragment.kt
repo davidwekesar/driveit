@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.android.driveit.data.source.network.Car
 import com.android.driveit.data.source.network.PhotoResult
 import com.android.driveit.databinding.FragmentCarListBinding
 import com.android.driveit.ui.adapters.GridCarListAdapter
@@ -26,9 +27,9 @@ class CarListFragment : Fragment() {
     ): View {
         _binding = FragmentCarListBinding.inflate(inflater, container, false)
 
-        viewModel.photoResult.observe(viewLifecycleOwner, { photoResult ->
-            photoResult?.let {
-                addDataToRecyclerView(it)
+        viewModel.carList.observe(viewLifecycleOwner, { carList ->
+            carList?.let {
+                addDataToRecyclerView(carList)
             }
         })
 
@@ -40,8 +41,8 @@ class CarListFragment : Fragment() {
         return binding.root
     }
 
-    private fun addDataToRecyclerView(photoResult: PhotoResult) {
-        val gridCarListAdapter = GridCarListAdapter(photoResult.results)
+    private fun addDataToRecyclerView(cars: List<Car>) {
+        val gridCarListAdapter = GridCarListAdapter(cars, requireContext())
         val recyclerView = binding.verticalCarList
         recyclerView.adapter = gridCarListAdapter
     }
