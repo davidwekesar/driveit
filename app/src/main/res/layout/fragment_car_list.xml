@@ -20,7 +20,7 @@
             android:background="@drawable/rounded_outline_background"
             android:contentDescription="@string/content_desc_go_back"
             android:padding="16dp"
-            app:srcCompat="@drawable/ic_arrow_back_ios_24"
+            app:srcCompat="@drawable/ic_arrow_back_ios_18"
             app:tint="@color/black" />
 
         <TextView
@@ -45,7 +45,7 @@
             android:paddingBottom="72dp"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
-            tools:listitem="@layout/list_item_car" />
+            tools:listitem="@layout/grid_list_item_car" />
     </LinearLayout>
 
     <include
