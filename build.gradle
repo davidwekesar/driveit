@@ -8,6 +8,7 @@ buildscript {
         timber_version = "5.0.1"
         secrets_gradle_plugin_version = "2.0.0"
         picasso_version = "2.71828"
+        progress_button_version = "2.1.0"
     }
     repositories {
         google()

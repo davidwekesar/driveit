@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">driveit</string>
-    <string name="log_in">Log In</string>
+    <string name="log_in">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="hint_password">Password</string>
     <string name="hint_email">Email</string>
@@ -25,6 +25,7 @@
     <string name="highest_price">Highest Price</string>
     <string name="lowest_price">Lowest Price</string>
     <string name="num_amount">2,450</string>
-    <string name="currency">KES %1$s</string>
+    <string name="currency_format">KES %1$s</string>
+    <string name="currency">KES</string>
     <string name="hello_john">Hello, John</string>
 </resources>

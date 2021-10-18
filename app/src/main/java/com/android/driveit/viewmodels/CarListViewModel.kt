@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.android.driveit.data.source.network.Car
-import com.android.driveit.data.source.network.PhotoResult
 import com.android.driveit.repository.DriveItRepository
 import com.android.driveit.utils.getListOfCars
 import kotlinx.coroutines.launch

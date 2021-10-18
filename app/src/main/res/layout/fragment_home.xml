@@ -65,7 +65,6 @@
                 android:layout_height="48dp"
                 android:layout_margin="8dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/profile_picture_img"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.ShapeableImageView" />
         </FrameLayout>
 

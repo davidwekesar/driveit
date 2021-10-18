@@ -47,7 +47,7 @@ class CarViewHolder(binding: ListItemCarBinding) : RecyclerView.ViewHolder(bindi
 
         textCarName.text = car.name
         val price = NumberFormat.getNumberInstance(Locale.getDefault()).format(car.price)
-        textCarPrice.text = String.format(context.getString(R.string.currency), price)
+        textCarPrice.text = String.format(context.getString(R.string.currency_format), price)
         textDuration.text = car.duration
         textRate.text = mapRateToDuration(car.duration)
     }
