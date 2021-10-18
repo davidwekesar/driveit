@@ -33,6 +33,7 @@ class HomeFragment : Fragment() {
 
         viewModel.userInfo.observe(viewLifecycleOwner, { userInfo ->
             userInfo?.let {
+                binding.textFirstName.text = it.data.firstName
                 setProfileImage(it.data.avatar)
             }
         })

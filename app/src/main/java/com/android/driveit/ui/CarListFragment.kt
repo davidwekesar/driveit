@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.android.driveit.data.source.network.PhotoResult
 import com.android.driveit.databinding.FragmentCarListBinding
-import com.android.driveit.ui.adapters.CarListAdapter
+import com.android.driveit.ui.adapters.GridCarListAdapter
 import com.android.driveit.viewmodels.CarListViewModel
 
 class CarListFragment : Fragment() {
@@ -41,9 +41,9 @@ class CarListFragment : Fragment() {
     }
 
     private fun addDataToRecyclerView(photoResult: PhotoResult) {
-        val carListAdapter = CarListAdapter(photoResult.results)
+        val gridCarListAdapter = GridCarListAdapter(photoResult.results)
         val recyclerView = binding.verticalCarList
-        recyclerView.adapter = carListAdapter
+        recyclerView.adapter = gridCarListAdapter
     }
 
     override fun onDestroyView() {

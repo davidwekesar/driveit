@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/filterBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="72dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/blue_rounded_background"
+        android:padding="16dp"
+        android:src="@drawable/ic_filter_list_24" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/best_match" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_height="wrap_content"
+            android:text="@string/highest_price" />
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_height="wrap_content"
+            android:text="@string/lowest_price" />
+    </com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>

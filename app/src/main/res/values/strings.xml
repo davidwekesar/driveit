@@ -21,4 +21,10 @@
     <string name="monthly">monthly</string>
     <string name="per_week">Per week</string>
     <string name="fire_login">Fire Login</string>
+    <string name="best_match">Best Match</string>
+    <string name="highest_price">Highest Price</string>
+    <string name="lowest_price">Lowest Price</string>
+    <string name="num_amount">2,450</string>
+    <string name="currency">KES</string>
+    <string name="hello_john">Hello, John</string>
 </resources>

@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white_100">
+        android:background="@color/white">
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -26,16 +26,28 @@
             app:layout_constraintTop_toTopOf="@+id/profileImageFrame" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/currency"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+            app:layout_constraintEnd_toStartOf="@+id/textView3" />
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="@string/amount_placeholder"
-            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:text="@string/num_amount"
+            android:textAppearance="?attr/textAppearanceHeadline4"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageButton"
             app:layout_constraintEnd_toStartOf="@+id/imageButton"
             app:layout_constraintTop_toTopOf="@+id/imageButton"
-            tools:text="@string/amount_placeholder" />
+            tools:text="@string/num_amount" />
 
         <FrameLayout
             android:id="@+id/profileImageFrame"
@@ -56,6 +68,19 @@
                 android:src="@drawable/profile_picture_img"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.ShapeableImageView" />
         </FrameLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImageFrame"
+            app:layout_constraintEnd_toStartOf="@+id/materialTextView4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/profileImageFrame"
+            app:layout_constraintTop_toTopOf="@+id/profileImageFrame"
+            tools:text="Mary" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"

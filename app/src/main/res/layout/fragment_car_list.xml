@@ -1,52 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white_100">
 
-    <ImageButton
-        android:id="@+id/backImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rounded_outline_background"
-        android:contentDescription="@string/content_desc_go_back"
-        android:padding="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_arrow_back_ios_24"
-        app:tint="@color/black" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/available_cars"
-        android:textAppearance="?attr/textAppearanceHeadline4"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backImageButton"
-        tools:text="@string/available_cars" />
+        <ImageButton
+            android:id="@+id/backImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_outline_background"
+            android:contentDescription="@string/content_desc_go_back"
+            android:padding="16dp"
+            app:srcCompat="@drawable/ic_arrow_back_ios_24"
+            app:tint="@color/black" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/verticalCarList"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:spanCount="2"
-        tools:listitem="@layout/list_item_car" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/available_cars"
+            android:textAppearance="?attr/textAppearanceHeadline4"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            tools:text="@string/available_cars" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/verticalCarList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="72dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/list_item_car" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/filterBottomSheet"
+        layout="@layout/filter_bottom_sheet" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
